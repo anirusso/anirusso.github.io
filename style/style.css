@@ -11,12 +11,70 @@ h1 {
 }
 
 h2 {
+	margin: 20px;
+	padding: 10px;
+  font-size: 48px;
+  background: rgb(255, 250, 117);
+  border: 3px solid black;
+}
+
+h3 {
   margin: 0 20px;
   font-family: Bagel Fat One;
   font-size: 42px;
+  color: pink;
+  text-shadow: 4px 4px black;
+}
+
+p {
+	margin: 0 40px;
+}
+	
+ul {
+	list-style: none;
+  padding-left: 0;
 }
 
 li {
   list-style-type: none;
   font-size: 24px;
+  margin: 0px;
+  color: blue;
+}
+
+li:hover {
+	background-color: black;
+}
+
+a {
+	transition: color 1s;
+}
+
+a:hover {
+	color: white;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  width: 40%;
+  text-align: center;
+  line-height: 75px;
+  border: 3px solid black;
+  box-shadow: 8px 8px;
+  transition: box-shadow 1s;
+}
+
+.flex-container > div:hover {
+	box-shadow: 20px 20px;
+}
+
+#cstutor > div {
+	font-size: 40px; 
 }
