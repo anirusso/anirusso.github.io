@@ -2,8 +2,17 @@ body {
   margin: 0;
   border: 0;
   padding: 1% 20%;
-  font-family: Pixelify Sans;
-  background-image: url("../imgs/stars.png");
+  /*font-family: Pixelify Sans;*/
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  background-image: url('../imgs/stars.png');
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/PressStart2P-Regular.ttf') format('truetype');
 }
 
 /* top header: name, description, fade-in */
@@ -14,19 +23,17 @@ body {
   height: 100vh;
   opacity: 1;
   text-align: center;
-  font-weight: 100;
   color: #fff;
 }
 
 header {
   position: sticky;
   top: 30%;
-  text-align: center;
   padding: 5px;
 }
 
 .fade-in {
-  font-size: 50px;
+  padding: 0 0 15% 0;
   animation: fadeIn 8s;
   -webkit-animation: fadeIn 5s;
   -moz-animation: fadeIn 8s;
@@ -34,26 +41,42 @@ header {
 }
 
 @keyframes fadeIn {
-  0% { opacity: .1; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadeIn {
-  0% { opacity: .1; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeIn {
-  0% { opacity: .1; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-header+p {
+header + p {
   position: sticky;
   top: 80%;
 }
@@ -61,16 +84,15 @@ header+p {
 /* heading & text styles */
 
 h1 {
+  font-size: 48px;
   margin: 0;
   padding: 0 0 0 5px;
 }
 
 h2 {
-	margin: 20px;
-	padding: 10px;
-  font-size: 48px;
-  background: rgb(255, 250, 117);
-  border: 3px solid black;
+  margin: 20px;
+  padding: 10px;
+  font-size: 16px;
 }
 
 h3 {
@@ -82,21 +104,36 @@ h3 {
 }
 
 p {
-	margin: 0 40px;
+  margin: 0 40px;
 }
 
 /* container for body elements */
 
 #container {
-  border: 1px solid black;
   margin: 0 auto;
   background: white;
   margin: 5% 0;
 }
 
+/* navbar */
+
+#nav {
+  background-color: rgb(0, 0, 888);
+  margin: 20px 0 0 0;
+}
+
 #links {
-  float: right;
   font-size: 20px;
+}
+
+#links a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.active {
+  background-color: rgb(255, 255, 200);
+  color: blue;
 }
 
 ul {
@@ -118,37 +155,45 @@ li {
   text-align: center;
 }
 
-.flex-container>div {
+.flex-container > div {
   flex: 100%;
   margin: 3%;
-  background-color: #C0C0C0;
+  background-color: #c0c0c0;
   width: 20%;
   height: 100px;
   border: 2px solid black;
   box-shadow: black 5px 5px;
 }
 
-.flex-container>div:hover {
+.flex-container > div:hover {
   background-color: white;
   box-shadow: black 10px 10px;
 }
 
 @media (min-width: 1100px) {
-  .flex-container>div {
+  .flex-container > div {
     flex: 30%;
   }
   .fade-in {
-  font-size: 100px;
+    padding: 5%;
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 40px;
   }
 }
 
-.projects {
+.projects,
+.games,
+.cs-tutor {
   clear: both;
-  border: 1px solid black;
-  border-collapse: collapse;
+  /*border: 20px solid black;*/
+  margin: 0 0 40px 0;
+  text-align: center;
+  background-color: rgb(255, 255, 200);
 }
 
-.flex-container>div>a {
+.title {
   display: inline-block;
   padding: 5px 0px;
   width: 100%;
@@ -158,18 +203,23 @@ li {
   text-align: left;
 }
 
-button{
-  margin:2px 2px 2px 0;
-  float:right;
-  width:14px;
-  height:14px;
-  background:#C0C0C0;
-  border-width:1px;
-  border-color:#FFFFFF #808080 #808080 #FFFFFF;
-  padding:0;
-  font-size:9px;
-  font-weight:bold;
-  font-family:Tahoma;
-  text-align:center;
-  focus:none;
+.title a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  margin: 2px 2px 2px 0;
+  float: right;
+  width: 14px;
+  height: 14px;
+  background: #c0c0c0;
+  border-width: 1px;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  padding: 0;
+  font-size: 9px;
+  font-weight: bold;
+  font-family: Tahoma;
+  text-align: center;
+  focus: none;
 }
