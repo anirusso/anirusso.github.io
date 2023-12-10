@@ -6,12 +6,11 @@
     <meta name="description" content="anita russo developer portfolio website" />
     <meta name="author" content="anita russo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="public/assets/style/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Pixelify+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Pixelify+Sans&family=Sniglet:wght@800&display=swap"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -21,25 +20,21 @@
 
     <div id="top">
       <header>
-        <h1 class="fade-in">anita russo</h1>
+        <h1 id="anchor" class="fade-in">anita russo</h1>
       </header>
       <p>developer based in the toronto area</p>
     </div>
 
-      <div id="nav">
-        <ul>
-          <div id="links">
-            <li class="active">[PROJECTS]</li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </div>
-        </ul>
-      </div>
+    <div id="nav">
+      <a class="active" href="#">[PROJECTS]</a>
+      <a href="public/about.html#nav">ABOUT</a>
+      <a href="public/contact.html#nav">CONTACT</a>
+    </div>
 
-      <div class="projects">
-        
-        <h2>web projects</h2>
-        <div class="flex-container">
+    <div class="projects">
+    
+      <h2>web projects</h2>
+      <div class="flex-container">
 
           <div>
             <div class="title">
@@ -47,6 +42,8 @@
                 <button>X</button>
                 <button>?</button>
             </div>
+            <p>Replica of MS Paint using jQuery</p>
+            <p>Not (yet) mobile friendly</p>
           </div>
           
           <div>
@@ -54,6 +51,11 @@
               <a href="https://anirusso.github.io/plainjs-calendar/index.html">js-calendar</a>
                 <button>X</button>
                 <button>?</button>
+            </div>
+            <div>
+            <a class="window" href="https://anirusso.github.io/plainjs-calendar/index.html"></a>
+              <p>Calendar made using plain JS</p>
+            </a>
             </div>
           </div>
 
@@ -63,19 +65,21 @@
               <button>X</button>
               <button>?</button>
             </div>
+            <p>Template for construction business portfolio</p>
+            <p>Under construction ;]</p>
           </div>
           <div>
             <div class="title">
-              noodle-restaurant
+              happy-noodle
               <button>X</button>
               <button>?</button>
             </div>
+            <p>Website designed for Happy Noodle restaurant</p>
+            <p>Temporarily unavailable</p>
           </div>
 
         </div>
-      </div>
 
-      <div class="projects">
         <h2>data projects</h2>
         <div class="flex-container">
 
@@ -85,6 +89,9 @@
                 <button>X</button>
                 <button>?</button>
             </div>
+            <a href="https://github.com/anirusso/save-the-bees/blob/main/bee_colony_decline_plot.ipynb">
+              <img src="public/assets/imgs/bee.png" height=64 width=64 />
+            </a>
           </div>
 
           <div>
@@ -93,28 +100,28 @@
                 <button>X</button>
                 <button>?</button>
             </div>
+            <a href="https://github.com/anirusso/app-data/blob/main/app-data.ipynb">
+              <img src="public/assets/imgs/appdata.png" height=64 width=64 />
+            </a>
           </div>
 
         </div>
-      </div>
+    </div>
 
       <div class="games">
 
         <h2>games</h2>
         <div class="flex-container">
-          <div>
-            <div class="title">
-              <a href="#">wordle</a>
-                <button>X</button>
-                <button>?</button>
-            </div>
-            </div>
-          <div>
-            <div class="title">
-              <a href="#">vacuum</a>
-                <button>X</button>
-                <button>?</button>
-            </div>
+          <div class="wordle">
+            <div>W</div>
+            <div>O</div>
+            <div>R</div>
+            <div>D</div>
+            <div>L</div>
+            <div>E</div>
+          </div>
+          <div class="vacuum">
+            <h4>VACUUM</h4>
           </div>
         </div>
 
@@ -123,12 +130,11 @@
       <div class="cs-tutor">
         <h2>cstutor courses</h2>
         <div class="flex-container">
-          <div><h3>SQL</h3></div>
-          <div><h3>WEBDEV</h3></div>
+          <div><a href="https://github.com/anirusso/cstutor-sql"><h3>SQL</h3></a></div>
+          <div><a href="https://github.com/anirusso/cstutor-webdev"><h3>WEBDEV</h3></a></div>
         </div>
       </div>
 
     </div>
-    
   </body>
 </html>

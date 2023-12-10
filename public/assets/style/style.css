@@ -2,7 +2,6 @@ body {
   margin: 0;
   border: 0;
   padding: 1% 20%;
-  /*font-family: Pixelify Sans;*/
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
   background-image: url('https://www.shutterstock.com/shutterstock/videos/1108055651/thumb/1.jpg?ip=x480');
@@ -33,6 +32,7 @@ header {
 }
 
 .fade-in {
+  font-size: 8vw;
   padding: 0 0 15% 0;
   animation: fadeIn 8s;
   -webkit-animation: fadeIn 5s;
@@ -84,7 +84,7 @@ header + p {
 /* heading & text styles */
 
 h1 {
-  font-size: 48px;
+  font-size: 72px;
   margin: 0;
   padding: 0 0 0 5px;
 }
@@ -92,55 +92,52 @@ h1 {
 h2 {
   margin: 20px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 3.5vw;
 }
 
 h3 {
-  margin: 0 20px;
-  font-family: Bagel Fat One;
-  font-size: 42px;
-  color: pink;
+  margin: auto;
+  width: 100%;
+  font-family: Sniglet, Arial;
+  font-size: 48px;
+  color: rgb(130, 255, 130);
   text-shadow: 5px 5px black;
 }
 
 h3:hover {
-  text-shadow: 8px 8px black;
+  text-shadow: 10px 10px black;
+  color: pink;
+}
+
+h4 {
+  font-size: 40px;
 }
 
 p {
-  margin: 0 40px;
+  margin: 10px 40px;
 }
 
 /* navbar */
 
 #nav {
-  background-color: rgb(0, 0, 888);
-  margin: 20px 0 0 0;
+  margin: 5% 0;
+  font-size: 1.65vw;
 }
 
-#links {
-  font-size: 16px;
-}
-
-#links a {
-  color: yellow;
+#nav a {
+  padding: 10px 20px;
   text-decoration: none;
+  color: yellow;
+  float: left;
 }
 
-.active {
+#nav a:hover {
+  background-color: blue;
+}
+
+#nav a.active {
   background-color: rgb(255, 255, 200);
   color: blue;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  padding: 10px 20px;
 }
 
 /* project components style */
@@ -149,6 +146,8 @@ li {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  margin: 3%;
+  padding-bottom: 20px;
 }
 
 .flex-container > div {
@@ -158,51 +157,40 @@ li {
   width: 20%;
   height: 100px;
   border: 4px solid black;
-  box-shadow: black 5px 5px;
+  box-shadow: black 8px 8px;
 }
 
 .flex-container > div:hover {
   background-color: white;
-  box-shadow: black 10px 10px;
-}
-
-@media (min-width: 1100px) {
-  .flex-container > div {
-    flex: 30%;
-  }
-  .fade-in {
-    padding: 5%;
-    font-size: 80px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  #links {
-    font-size: 24px;
-  }
+  box-shadow: black 12px 12px;
 }
 
 .projects,
 .games,
-.cs-tutor {
-  margin: 0 0 40px 0;
+.cs-tutor,
+.component {
+  clear: both;
   text-align: center;
   background-color: rgb(255, 255, 200);
 }
 
 .title {
-  display: inline-block;
-  font-size: 16px;
   padding: 5px 0px;
   width: 100%;
   background-color: #000080;
   color: white;
+  float: left;
   text-align: left;
 }
 
 .title a {
   text-decoration: none;
   color: white;
+  padding: 0 0 0 5px;
+}
+
+.title a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -216,14 +204,94 @@ button {
   padding: 0;
   font-size: 9px;
   font-weight: bold;
-  font-family: Tahoma;
   text-align: center;
-  focus: none;
 }
+
+.projects div {
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+a.window {
+  display: block;
+}
+
+/* game & cs-tutor style */
 
 .cs-tutor div div {
   background-color: pink;
   height: 100px;
   line-height: 90px;
   border-radius: 12px;
+}
+
+.cs-tutor a {
+  text-decoration: none;
+}
+
+.wordle {
+  height: 200px;
+  display: grid;
+  background-color: #2196f3;
+  grid-template: auto / auto auto auto;
+}
+
+.wordle div {
+  margin: 5px 20px;
+  border: 3px solid black;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  background-color: rgb(120, 124, 127);
+}
+
+.wordle div:nth-child(even):hover {
+  background-color: rgb(200, 182, 83);
+  color: black;
+}
+
+.wordle div:nth-child(odd):hover {
+  background-color: rgb(108, 169, 101);
+  color: black;
+}
+
+.vacuum {
+  background-image: url('../imgs/vacuum.png');
+  background-position: center;
+  height: 500px;
+}
+
+.vacuum:hover {
+  text-shadow: 5px 5px black;
+  color: white;
+}
+
+/* about & contact style */
+
+.component div {
+  height: 100%;
+}
+
+.component div div {
+  height: 90%;
+  float: right;
+}
+
+.component div div img {
+  float: left;
+  padding-right: 10px;
+}
+
+/* responsive style */
+
+@media (min-width: 900px) {
+  .flex-container > div {
+    flex: 30%;
+  }
+  .fade-in {
+    padding: 0 0 5% 0;
+  }
 }
