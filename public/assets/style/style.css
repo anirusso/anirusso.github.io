@@ -1,9 +1,8 @@
 body {
   margin: 0;
   border: 0;
-  padding: 1% 20%;
+  padding: 1% 10%;
   font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
   background-image: url('https://www.shutterstock.com/shutterstock/videos/1108055651/thumb/1.jpg?ip=x480');
 }
 
@@ -90,16 +89,14 @@ h1 {
 }
 
 h2 {
-  margin: 20px;
   padding: 10px;
   font-size: 3.5vw;
 }
 
 h3 {
   margin: auto;
-  width: 100%;
   font-family: Sniglet, Arial;
-  font-size: 48px;
+  font-size: 40px;
   color: rgb(130, 255, 130);
   text-shadow: 5px 5px black;
 }
@@ -110,11 +107,11 @@ h3:hover {
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 p {
-  margin: 10px 40px;
+  margin: 10px 5px;
 }
 
 /* navbar */
@@ -155,7 +152,7 @@ p {
   margin: 3%;
   background-color: #c0c0c0;
   width: 20%;
-  height: 100px;
+  height: 120px;
   border: 4px solid black;
   box-shadow: black 8px 8px;
 }
@@ -280,18 +277,30 @@ a.window {
   float: right;
 }
 
-.component div div img {
-  float: left;
-  padding-right: 10px;
-}
+/*
+
+*/
 
 /* responsive style */
 
 @media (min-width: 900px) {
+  body {
+    padding: 1% 20%;
+  }
   .flex-container > div {
     flex: 30%;
   }
   .fade-in {
     padding: 0 0 5% 0;
+  }
+  h3 {
+    font-size: 48px;
+  }
+  h4 {
+    font-size: 40px;
+  }
+  .component div div img {
+    float: left;
+    padding-right: 10px;
   }
 }
