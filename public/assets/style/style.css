@@ -108,6 +108,8 @@ h3:hover {
 }
 
 h4 {
+  margin: 0;
+  padding: 10px;
   font-size: 32px;
 }
 
@@ -237,43 +239,50 @@ a.window {
   text-decoration: none;
 }
 
-.wordle {
+.foodle {
   height: 200px;
   display: grid;
   background-color: #2196f3;
   grid-template: auto / auto auto auto;
 }
 
-.wordle div {
-  margin: 5px 20px;
+.foodle div {
+  margin: 10px 20px;
   border: 3px solid black;
   text-align: center;
-  height: 30px;
-  line-height: 30px;
-  font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+  height: 32px;
+  font-family: Clear Sans, Helvetica Neue, Arial, sans-serif;
   color: white;
   font-weight: bold;
   font-size: 28px;
   background-color: rgb(120, 124, 127);
 }
 
-.wordle div:nth-child(even):hover {
+.foodle div:nth-child(even):hover {
   background-color: rgb(200, 182, 83);
   color: black;
 }
 
-.wordle div:nth-child(odd):hover {
+.foodle div:nth-child(odd):hover {
   background-color: rgb(108, 169, 101);
   color: black;
 }
 
 .vacuum {
+  overflow: hidden;
+}
+
+.effect {
+  width: 100%;
+  height: 100%;
+  line-height: 75px;
   background-image: url('../imgs/vacuum.png');
   background-position: center;
   height: 500px;
 }
 
-.vacuum:hover {
+.vacuum:hover .effect,
+.vacuum:focus .effect {
   text-shadow: 5px 5px black;
   color: white;
 }
