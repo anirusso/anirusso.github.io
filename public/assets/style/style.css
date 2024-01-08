@@ -151,6 +151,10 @@ a {
   color: blue;
 }
 
+dt {
+  padding-top: 20px;
+}
+
 /* project components style */
 
 .flex-container {
@@ -252,6 +256,8 @@ a.window {
   display: grid;
   background-color: #2196f3;
   grid-template: auto / auto auto auto;
+  background-image: url('../imgs/food.png');
+  background-position: top;
 }
 
 .foodle div {
